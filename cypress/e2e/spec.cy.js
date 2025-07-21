@@ -2,8 +2,8 @@ describe('template spec', () => {
 
   beforeEach(() => {
 
-    cy.visit('http://localhost:3000/')
-    cy.get('#__next > div > div.pages__TitleBackground-sc-1ee1f2s-1.rNIgE > h1')
+    cy.visit('/')
+    cy.get('#__next > div > div > h1')
       .should('be.visible')
       .should('have.text', 'O banco com bugs e falhas do seu jeito')
   })
