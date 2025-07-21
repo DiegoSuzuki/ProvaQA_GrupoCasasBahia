@@ -1,13 +1,11 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 10000,
   e2e: {
-    
-
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      
+      // Define baseUrl dinamicamente a partir do env
+      config.baseUrl = config.env.baseUrl;
+      return config;
     },
   },
 });
