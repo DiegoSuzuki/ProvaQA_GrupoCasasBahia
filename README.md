@@ -1,37 +1,156 @@
-# cypress-basico-v2
-
-Repository of the basic test automation with Cypress course from the Talking About Testing school
+# Prova de QA
+Este repositório contém as minhas respostas e resolução de tarefas para o processo seletivo de analista de QA.
 
 ## Pre-requirements
 
-It is required to have Node.js and npm installed to run this project.
+É necessário ter o Node.js e o npm instalados para executar este projeto.
 
-> I used versions `v16.13.2` and `8.3.2` of Node.js and npm, respectively. I suggest you use the same or later versions.
+Nodejs versão `v22.17.1` 
+NPM versão `10.9.2`
+Yarn versão `1.22.22`
 
-## Installation
+Projeto bugbank
 
-Run `npm install` (or `npm i` for the short version) to install the dev dependencies.
+### Baixando o projeto bugbank
 
-## Tests
+para baixar o projeto faça o clone desse repositório com o comando.
 
-You can run the tests simulating a desktop or mobile viewport.
+```bash
+  git clone https://github.com/jhonatasmatos/bugbank.git
+```
 
-### Desktop
+Agora acesse a pasta do projeto e digite o comando abaixo para baixar e atualizar as depêndencias do projeto.
 
-Run `npm test` (or `npm t` for the short version) to run the test in headless mode on a desktop viewport.
+```bash
+  yarn
+```
 
-Or, run `npm run cy:open` to open Cypress in interactive mode.
+### Executando a aplicação do bugbank
 
-### Mobile
+Para rodar o projeto, acesse a pasta do projeto via terminal e execute o comando:
 
-Run `npm test` (or `npm t` for the short version) to run the test in headless mode on a mobile viewport.
+```bash
+  yarn dev
+```
 
-Or, run `npm run cy:open:mobile` to open Cypress in interactive mode.
+Agora acesse no browser o endereço localhost:3000
 
-## Support this project
+---
 
-If you want to support this project, leave a ⭐.
+## Instalação do projeto de testes Cypress
 
-___
+Clone o reposítório com o comando:
+```bash
+  git clone https://github.com/DiegoSuzuki/ProvaQA_GrupoCasasBahia.git
+```
+Acesse via terminal a pasta do projeto e Instale as dependências com o comando:
 
-This project was created with 💚 by [Walmyr](https://walmyr.dev).
+```bash
+  npm install
+```
+Altere a URL do arquivo cypress.env.json para `"baseUrl": "http://localhost:3000/"`
+
+Inicie o Cypress com o comando:
+
+```bash
+  npx cypress open
+```
+Na interface do Cypress selecione o navegador e ao abrir o navegador selecione o arquivo clique sobre o arquivo `spec.cy.js`
+
+Caso queira executar apenas via CLI utilize o comando:
+
+```bash
+  npm test
+```
+
+## Objetivo
+
+Avaliar habilidades na escrita de cenários, automação de testes com Cypress, organização do código e configuração de pipeline de CI/CD.
+
+---
+
+## 1. Preparação do Ambiente
+
+1. Clone o repositório e suba a aplicação local:  
+   [https://github.com/jhonatasmatos/bugbank-ui](https://github.com/jhonatasmatos/bugbank-ui)
+
+---
+
+## 2. Escrita de Cenários de Teste (Gherkin)
+
+**Tarefa:**  
+Escreva os cenários de teste utilizando Gherkin para os seguintes fluxos:
+
+### Fluxos básicos
+
+- Cadastro de usuário com sucesso  
+- Login com credenciais inválidas  
+- Transferência de valores entre contas  
+- Saque de valores maiores que o saldo disponível  
+
+### Fluxos adicionais
+
+- Cadastro de usuário com dados inválidos  
+- Transferência para uma conta inexistente  
+- Tentativa de saque sem saldo suficiente e verificação da mensagem de erro  
+- Verificação de saldo após transações  
+
+## Arquivos com os cenários criados no diretório /features
+
+---
+
+## 3. Automação com Cypress
+
+**Tarefa:**  
+Automatize ao menos **1 cenário do fluxo básico** e **2 cenários do fluxo adicional** utilizando Cypress.
+
+Repositório:  
+[https://github.com/jhonatasmatos/bugbank-ui](https://github.com/jhonatasmatos/bugbank-ui)
+
+**Cenários automatizados**
+
+**Fluxo básico**
+
+- Cadastro de usuário com sucesso  
+
+**Fluxos adicionais**
+
+- Cadastro de usuário com dados inválidos  
+- Transferência para uma conta inexistente 
+
+---
+
+## 4. Integração com CI/CD
+
+**Tarefa:**
+
+1. Realize o push do seu código para o GitHub, configure um pipeline de CI/CD utilizando **GitHub Actions** para rodar os testes automaticamente.
+
+2. O pipeline deve:
+
+   - Receber parâmetros de: **tag do cenário** e **browser** que será executado.
+   - Executar os testes todos os dias da semana às **8:00 horas**.
+   - Executar os testes automaticamente em **Pull Requests**.
+   - Gerar **relatórios de execução** e disponibilizá-los no **GitHub Pages**.
+
+---
+
+## 5. Instruções de Entrega
+
+1. Subir o repositório no GitHub compartilhado.
+
+2. Escrever um **README** contendo:
+
+   - Passos para instalar as dependências  
+   - Como realizar a execução dos testes  
+   - Como gerar e acessar o relatório de execução  
+   - Explicação da estrutura da arquitetura do projeto  
+
+3. Reportar **bugs encontrados**:
+
+   - Se encontrar qualquer bug no sistema testado, relatar os problemas encontrados de forma clara.
+   - O relatório deve conter:
+     - Passos para reproduzir o erro.
+     - Resultado esperado vs. resultado obtido.
+     - Evidências (prints, logs ou vídeos curtos).
+   - O bug pode ser reportado no próprio repositório GitHub (**Issues**) ou em um documento separado anexado ao repositório.
