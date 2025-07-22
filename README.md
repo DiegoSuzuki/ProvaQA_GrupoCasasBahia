@@ -5,7 +5,7 @@ Este repositório contém as minhas respostas e resolução de tarefas para o pr
 
 É necessário ter o Node.js e o npm instalados para executar este projeto.
 
-Nodejs versão `v22.17.1` 
+Nodejs versão `22.17.1` 
 NPM versão `10.9.2`
 Yarn versão `1.22.22`
 
@@ -63,11 +63,37 @@ Caso queira executar apenas via CLI utilize o comando:
   npm test
 ```
 
+Testando localmente com outros navegadores
+
+Firefox
+```bash
+  npm run e2e:firefox
+```
+Edge
+```bash
+  npm run e2e:edge
+```
+Chrome
+```bash
+  npm run e2e:chrome
+```
+Electron
+```bash
+  npm run e2e:electron
+```
+
+Para testar com interface gráfica do navegador (Headed) adicione `:headed`
+
+Exemplo
+```bash
+  npm run e2e:chrome:headed
+```
 **Evidencias da execução estão disponiveis nos diretórios `reports` e `videos`.**
 
 ## Arquitetura
 
 Segue as boas praticas descritas na documentação oficial do Cypress [https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback](https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback)
 
-**reuso de funcões
-**configuração flexivel para execução em ambientes distintos
+**reuso de funcões com o uso de commands**
+
+**configuração flexivel para execução em ambientes distintos com o uso de arquivo de configuração de ambiente**
