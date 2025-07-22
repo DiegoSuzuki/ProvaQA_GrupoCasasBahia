@@ -63,94 +63,11 @@ Caso queira executar apenas via CLI utilize o comando:
   npm test
 ```
 
-## Objetivo
+**Evidencias da execução estão disponiveis nos diretórios `reports` e `videos`.**
 
-Avaliar habilidades na escrita de cenários, automação de testes com Cypress, organização do código e configuração de pipeline de CI/CD.
+## Arquitetura
 
----
+Segue as boas praticas descritas na documentação oficial do Cypress [https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback](https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback)
 
-## 1. Preparação do Ambiente
-
-1. Clone o repositório e suba a aplicação local:  
-   [https://github.com/jhonatasmatos/bugbank-ui](https://github.com/jhonatasmatos/bugbank-ui)
-
----
-
-## 2. Escrita de Cenários de Teste (Gherkin)
-
-**Tarefa:**  
-Escreva os cenários de teste utilizando Gherkin para os seguintes fluxos:
-
-### Fluxos básicos
-
-- Cadastro de usuário com sucesso  
-- Login com credenciais inválidas  
-- Transferência de valores entre contas  
-- Saque de valores maiores que o saldo disponível  
-
-### Fluxos adicionais
-
-- Cadastro de usuário com dados inválidos  
-- Transferência para uma conta inexistente  
-- Tentativa de saque sem saldo suficiente e verificação da mensagem de erro  
-- Verificação de saldo após transações  
-
-## Arquivos com os cenários criados no diretório /features
-
----
-
-## 3. Automação com Cypress
-
-**Tarefa:**  
-Automatize ao menos **1 cenário do fluxo básico** e **2 cenários do fluxo adicional** utilizando Cypress.
-
-Repositório:  
-[https://github.com/jhonatasmatos/bugbank-ui](https://github.com/jhonatasmatos/bugbank-ui)
-
-**Cenários automatizados**
-
-**Fluxo básico**
-
-- Cadastro de usuário com sucesso  
-
-**Fluxos adicionais**
-
-- Cadastro de usuário com dados inválidos  
-- Transferência para uma conta inexistente 
-
----
-
-## 4. Integração com CI/CD
-
-**Tarefa:**
-
-1. Realize o push do seu código para o GitHub, configure um pipeline de CI/CD utilizando **GitHub Actions** para rodar os testes automaticamente.
-
-2. O pipeline deve:
-
-   - Receber parâmetros de: **tag do cenário** e **browser** que será executado.
-   - Executar os testes todos os dias da semana às **8:00 horas**.
-   - Executar os testes automaticamente em **Pull Requests**.
-   - Gerar **relatórios de execução** e disponibilizá-los no **GitHub Pages**.
-
----
-
-## 5. Instruções de Entrega
-
-1. Subir o repositório no GitHub compartilhado.
-
-2. Escrever um **README** contendo:
-
-   - Passos para instalar as dependências  
-   - Como realizar a execução dos testes  
-   - Como gerar e acessar o relatório de execução  
-   - Explicação da estrutura da arquitetura do projeto  
-
-3. Reportar **bugs encontrados**:
-
-   - Se encontrar qualquer bug no sistema testado, relatar os problemas encontrados de forma clara.
-   - O relatório deve conter:
-     - Passos para reproduzir o erro.
-     - Resultado esperado vs. resultado obtido.
-     - Evidências (prints, logs ou vídeos curtos).
-   - O bug pode ser reportado no próprio repositório GitHub (**Issues**) ou em um documento separado anexado ao repositório.
+**reuso de funcões
+**configuração flexivel para execução em ambientes distintos
